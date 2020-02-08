@@ -27,7 +27,12 @@ class Doctor
   end 
   
   def patients
-    appointments.collect {|appointment| appointment.patient}
+    #appointments.collect {|appointment| appointment.patient}
+    array = []
+    appointments.each do |appointment|
+      array << appointment.patient 
+    end 
+    array 
   end 
   
 end   
