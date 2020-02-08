@@ -6,17 +6,17 @@ class Doctor
   
   def initialize(name)
     @name = name 
-    
-    save
+    @@all << self
+    # save
   end   
   
   def self.all
     @@all 
   end
   
-  def save
-    @@all << self
-  end   
+  # def save
+  #   @@all << self
+  # end   
   
   def new_appointment(patient, date)
     Appointment.new(date, patient, self)
